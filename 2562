@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int a[9];
+	int max = 0;
+	int count = 0;
+
+	for (int i = 0; i <= 8; i++)
+	{
+		cin >> a[i];
+		if (max < a[i]) {
+			max = a[i];
+			count = i;
+		}
+	}
+	cout << max <<"\n";
+	cout << count + 1;
+
+}
