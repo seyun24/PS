@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+  
+int main(void) {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    stack<int> s;
+    string a;
+    int n;
+    cin >> n;
+    int i = 1;
+    while (n--) {
+        int k;
+        cin >> k;
+        while (i <= k) {
+            s.push(i++);
+            a +=  '+';
+        }
+        if (s.top() == k) {
+            s.pop();
+            a += '-';
+        }
+        else {
+            cout << "NO";
+            return 0;
+        }
+    }
+    for (auto c : a)cout << c<<'\n';
+
+}
